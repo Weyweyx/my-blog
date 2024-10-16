@@ -1,0 +1,212 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --background-color: #fff;
+    --accent-color: #ff6b6b;
+    --border-color: #e0e0e0;
+    --hover-color: #0056b3;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-align: left;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.8;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  input[type="text"], textarea {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  /* Blog Post List */
+  .blog-post {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s;
+  }
+  
+  .blog-post:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-post h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  .blog-post p {
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  
+  /* Light/Dark Mode Toggle */
+  .toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .toggle-label {
+    margin-right: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .toggle {
+    width: 60px;
+    height: 30px;
+    background-color: var(--border-color);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: left 0.3s;
+  }
+  
+  [data-theme='dark'] {
+    --primary-color: #1a73e8;
+    --secondary-color: #333;
+    --text-color: #fff;
+    --background-color: #1a1a1a;
+    --accent-color: #ffbaba;
+    --border-color: #444;
+    --hover-color: #0d47a1;
+  }
+  
+  [data-theme='dark'] .toggle {
+    background-color: var(--primary-color);
+  }
+  
+  [data-theme='dark'] .toggle::before {
+    left: 35px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+  
+  footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  footer a:hover {
+    color: var(--hover-color);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    main {
+      padding: 15px;
+    }
+  }
