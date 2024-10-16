@@ -1,5 +1,5 @@
 function displayPosts() {
-    const postContainer = document.getElementById('post-container');
+    const postContainer = document.getElementById('posts-container');
     const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
 
     postContainer.innerHTML = '';

@@ -1,7 +1,7 @@
-const form = document.querySelector('.form');
+const form = document.getElementById('blog-form');
 const usernameInput = document.getElementById('username');
-const titleInput = document.getElementById('blog-title');
-const contentInput = document.getElementById('blog-content');
+const titleInput = document.getElementById('title');
+const contentInput = document.getElementById('content');
 
 
 form.addEventListener('submit', function (event) {
